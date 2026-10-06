@@ -1,0 +1,92 @@
+name: frutgo
+
+description: Grocery mobile application
+
+publish_to: "none"
+
+version: 1.0.5+9
+environment:
+  sdk: ">=3.12.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.4
+  pdf: ^3.11.1
+  permission_handler: ^11.3.1
+  printing: ^5.13.2
+  # iOS style icons
+  cupertino_icons: ^1.0.8
+
+  # API / HTTP
+  http: ^1.5.0
+
+  # Environment variables
+  flutter_dotenv: ^5.2.1
+
+  # State management
+  provider: ^6.1.5
+
+  # Local storage
+  shared_preferences: ^2.5.3
+
+  # Google Login
+  google_sign_in: ^7.2.0
+  google_sign_in_web: ^1.1.3
+
+  # Current location
+  geolocator: ^14.0.3
+
+  # Convert coordinates to address
+  geocoding: ^5.0.0
+
+  # Phone / WhatsApp / external URLs
+  url_launcher: ^6.3.2
+
+  # Push notifications
+  firebase_core: ^4.14.0
+  firebase_messaging: ^16.6.0
+  flutter_local_notifications: ^22.3.0
+
+  # Share order details
+  share_plus: ^13.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # Recommended Flutter lint rules
+  flutter_lints: ^6.0.0
+
+  # App launcher icon generator
+  flutter_launcher_icons: ^0.14.4
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Environment file
+    - .env
+
+    # Main app logo
+    - assets/logo.png
+    - assets/login.png
+
+    # Banner images
+    - assets/banners/
+
+    # Promotional images
+    - assets/promos/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+
+  # Frutgo app logo
+  image_path: "assets/icon.png"
+
+  # Android minimum SDK
+  min_sdk_android: 21
+
+  # Required for iOS icon generation
+  remove_alpha_ios: true
